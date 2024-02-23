@@ -1,0 +1,17 @@
+name: Zitcha version numbering
+author: Sam Anthony
+
+inputs:
+  higher-version-string:
+    required: true
+  lower-version-string:
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Validate Zitcha version numbering
+      shell: bash
+      run: |
+        echo "Version String: ${{ inputs.version-string }}"
+        php ./src/zitcha-version-numbering.php "${{ inputs.higher-version-string }}" "${{ inputs.lower-version-string }}"

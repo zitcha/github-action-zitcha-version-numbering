@@ -1,0 +1,22 @@
+name: Test
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    environment:
+      name: test
+    name: Automated test action
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Test
+        shell: bash
+        run: |
+          pwd
+          ls -la
+          cd src
+          php test-zitcha-version-numbering.php
+          
