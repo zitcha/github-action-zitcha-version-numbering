@@ -14,4 +14,4 @@ runs:
       shell: bash
       run: |
         echo "Version String: ${{ inputs.version-string }}"
-        php ./src/zitcha-version-numbering.php "${{ inputs.higher-version-string }}" "${{ inputs.lower-version-string }}"
+        php ${{ github.action_path }}/src/zitcha-version-numbering.php "${{ inputs.higher-version-string }}" "${{ inputs.lower-version-string }}"
