@@ -21,6 +21,6 @@ jobs:
       - name: Functional Test
         uses: the-pistol/github-action-zitcha-version-numbering@master
         with:
-          higher-version-string: "1.9.9"
-          lower-version-string: "1.9.0"
+          higher-version-string: "v1.9.9"
+          lower-version-string: "v1.9.0"
           
