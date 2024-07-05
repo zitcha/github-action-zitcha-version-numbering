@@ -19,7 +19,7 @@ jobs:
           php test-zitcha-version-numbering.php
 
       - name: Functional Test
-        uses: the-pistol/github-action-zitcha-version-numbering@master
+        uses: zitcha/github-action-zitcha-version-numbering@master
         with:
           higher-version-string: "v1.9.9"
           lower-version-string: "v1.9.0"
